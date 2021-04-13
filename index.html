@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link href="fontawesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Our Platform</title>
+</head>
+
+<body>
+    <div class="addmedia-loading">
+        <h3>Deleting...</h3>
+    </div>
+    <div class="nav">
+        <p class="nav-title">Home</p>
+        <button id="btnAddMedia">Add Media</button>
+    </div>
+
+    <div class="home-image-list-container">
+        <h2 class="home-subtitle">Image</h2>
+        <h3 class="home-loading-image-text">Loading images...</h3>
+        <div class="home-image-list"></div>
+    </div>
+
+    <div class="home-audio-list-container">
+        <h2 class="home-subtitle">Audio</h2>
+        <h3 class="home-loading-audio-text">Loading audio...</h3>
+        <div class="home-audio-list"></div>
+    </div>
+
+    <div class="home-video-list-container">
+        <h2 class="home-subtitle">Video</h2>
+        <h3 class="home-loading-video-text">Loading videos...</h3>
+        <div class="home-video-list"></div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-auth.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAxfBR0aEYfb9NXRqS48HjYuEQeEeY1GHg",
+            authDomain: "trial1-6c62d.firebaseapp.com",
+            databaseURL: "https://trial1-6c62d-default-rtdb.firebaseio.com",
+            projectId: "trial1-6c62d",
+            storageBucket: "trial1-6c62d.appspot.com",
+            messagingSenderId: "998750737384",
+            appId: "1:998750737384:web:a065922c14ca325e300a5d",
+            measurementId: "G-SVR228SZJD",
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+
+</html>

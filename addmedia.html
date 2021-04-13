@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Add Media</title>
+</head>
+
+<body>
+    <div class="addmedia-loading">
+        <h3>Uploading...</h3>
+    </div>
+    <div class="nav">
+        <p class="nav-title">Add Media</p>
+    </div>
+    <div class="addmedia-body">
+        <!-- Add Image -->
+
+        <div class="addmedia-container">
+            <h3>Add Image</h3>
+            <div class="addmedia-img-wrapper">
+                <img id="addmediaImg" src="assets/image/placeholder_image.png" />
+            </div>
+            <input type="file" id="imgChooser" name="img" accept="image/*">
+            <button class="addmedia-upload-img" id="addmediaUploadImg">Upload
+                Image</button>
+
+        </div>
+
+        <!-- Add Audio -->
+        <div class="addmedia-container">
+            <h3>Add Audio</h3>
+            <audio controls id="addmediaAudio">
+                <source id="addmediaAudioSrc" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <input type="file" id="audioChooser" name="audio" accept="audio/.mp3 .m4a .wav .midi .ogg">
+            <button class="addmedia-upload-img" id="addmediaUploadAudio">Upload
+                Audio</button>
+        </div>
+
+        <!-- Add Video -->
+        <div class="addmedia-container">
+            <h3>Add Video</h3>
+            <video id="addmediaVideo" width="320" height="240" controls>
+                <source id="addmediaVideoSrc" src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <input type="file" id="videoChooser" name="audio" accept="video/*">
+            <button class="addmedia-upload-img" id="addmediaUploadVideo">Upload
+                Video</button>
+        </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-auth.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAxfBR0aEYfb9NXRqS48HjYuEQeEeY1GHg",
+            authDomain: "trial1-6c62d.firebaseapp.com",
+            databaseURL: "https://trial1-6c62d-default-rtdb.firebaseio.com",
+            projectId: "trial1-6c62d",
+            storageBucket: "trial1-6c62d.appspot.com",
+            messagingSenderId: "998750737384",
+            appId: "1:998750737384:web:a065922c14ca325e300a5d",
+            measurementId: "G-SVR228SZJD",
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+    <script type="text/javascript" src="./addmedia.js"></script>
+</body>
+
+</html>
